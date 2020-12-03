@@ -1,1 +1,20 @@
 /* Write your CSS here. */
+
+.wgs {
+width: 640px;
+height: 482px;
+position: relative;
+}
+
+.wgs__mole-head {
+width: 376px;
+left: 109px;
+position:absolute;
+}
+
+.wgs__dirt-pile {
+position:absolute;
+top: 262px;;
+width: 640px;
+height: 220px;
+}
