@@ -9,3 +9,8 @@
 
 // });
 
+let popUpRandomMole = function () {
+    let moleHeads = Array.from(document.querySelectorAll(".wgs__mole-head"));
+    let iMole = Math.floor(Math.random() * 8);
+    moleHeads[iMole].classList.remove("wgs__mole-head--hidden");
+}
