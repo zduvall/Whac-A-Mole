@@ -4,12 +4,15 @@
 width: 640px;
 height: 482px;
 position: relative;
+display: inline-block;
+overflow: hidden;
 }
 
 .wgs__mole-head {
 width: 376px;
 left: 109px;
 position:absolute;
+transition: margin-top 0.25s;
 }
 
 .wgs__dirt-pile {
@@ -17,4 +20,8 @@ position:absolute;
 top: 262px;;
 width: 640px;
 height: 220px;
+}
+
+.wgs__mole-head--hidden {
+    margin-top: 482px;
 }
