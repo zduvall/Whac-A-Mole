@@ -2,13 +2,40 @@
 
 body {
   zoom: 0.75;
+  background-color: brown;
 }
 
+.header__title {
+    width: fit-content;
+    margin: auto;
+    font-size: 80px;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+}
+
+.header__sub-header {
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+
+    
+    background-image: url("./mole-hill.png");
+    background-image: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+/* playing field */
 .pf {
   display: grid;
-  grid-template-rows: 1fr 1fr ;
-  grid-template-columns: 1fr 1fr 1fr 1fr ;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
 }
+
+/* whack-a-mole game space */
 .wgs {
   width: 320px;
   height: 241px;
@@ -19,8 +46,8 @@ body {
 
 .wgs__mole-head {
   width: 188px;
-  left: 54.5px;
   position: absolute;
+  left: 54.5px;
   transition: margin-top 0.25s;
 }
 
@@ -35,3 +62,6 @@ body {
   margin-top: 291px;
 }
 
+.wgs__mole-head--game-won {
+  margin-top: 0px;
+}

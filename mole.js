@@ -11,9 +11,24 @@ window.addEventListener("DOMContentLoaded", () => {
     }, 1000);
 
     let moleHeads = Array.from(document.querySelectorAll(".wgs__mole-head"));
+
     moleHeads.forEach(moleHead => moleHead.addEventListener("click", (event) => {
         event.target.classList.add("wgs__mole-head--hidden");
         event.target.classList.add("wgs__mole-head--whacked");
+
+        let moleHeadsStillAvailable = Array.from(document.querySelectorAll(".wgs__mole-head:not(.wgs__mole-head--whacked)"));
+        let subHeaderTitle = document.getElementById("sub-header-title")
+        subHeaderTitle.innerHTML = `moles left: ${0 || moleHeadsStillAvailable.length}`
+
+        // Declare the game is won when there are no moles that haven't been whacked
+        if (moleHeadsStillAvailable.length === 0) {
+            // let winningHeader = document.createElement("h2")
+            // winningHeader.innerHTML = "You Win!!!"
+            // document.getElementById("sub-header").appendChild(winningHeader)
+            subHeaderTitle.innerHTML = "winner!"
+
+            moleHeads.forEach(moleHead => moleHead.classList.add("wgs__mole-head--game-won"))
+        }
     }))
 
 });
@@ -27,12 +42,12 @@ let hideMole = function (hiddenMole) {
 };
 
 let popUpRandomMole = function () {
-    let moleHeads = Array.from(document.querySelectorAll(".wgs__mole-head:not(.wgs__mole-head--whacked)"));
-    let iMole = Math.floor(Math.random() * moleHeads.length);
-    let hiddenMole = moleHeads[iMole]
+    let moleHeadsStillAvailable = Array.from(document.querySelectorAll(".wgs__mole-head:not(.wgs__mole-head--whacked)"));
+    let iMole = Math.floor(Math.random() * moleHeadsStillAvailable.length);
+    let hiddenMole = moleHeadsStillAvailable[iMole]
     hiddenMole.classList.remove("wgs__mole-head--hidden");
 
     setTimeout(() => {
         hideMole(hiddenMole);
-    }, 2500);
+    }, 2000);
 };
