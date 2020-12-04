@@ -1,6 +1,5 @@
-let gameStyle, moleCount;
-
 window.addEventListener("DOMContentLoaded", () => {
+    let gameStyle, moleCount;
     let moleHeads = Array.from(document.querySelectorAll(".wgs__mole-head"));
 
     let startEasyButton = document.getElementById("start-easy-button");
@@ -34,12 +33,18 @@ window.addEventListener("DOMContentLoaded", () => {
         setTimeout(() => {
             popUpRandomMole();
         }, 500);
+        
+        if(gameStyle === "hard") {            
+            setTimeout(() => {
+                popUpRandomMole();
+            }, 900);
+        }
     }
 
     moleHeads.forEach(moleHead => moleHead.addEventListener("click", (event) => {
         event.target.classList.add("wgs__mole-head--hidden", "wgs__mole-head--whacked");
 
-        moleCount--;
+        if (moleCount > 0) moleCount--;
         subHeaderTitle.innerHTML = `moles left: ${moleCount}`;
 
         // What happens when the game is won?
@@ -52,40 +57,34 @@ window.addEventListener("DOMContentLoaded", () => {
         }
     }))
 
-});
+    function popUpRandomMole() {
+        let moleHeadsStillAvailable;
+        if (gameStyle === "easy") {
+            moleHeadsStillAvailable = Array.from(document.querySelectorAll(".wgs__mole-head:not(.wgs__mole-head--whacked)"));
+        } else {
+            moleHeadsStillAvailable = Array.from(document.querySelectorAll(".wgs__mole-head"))
+        }
 
+        let moleIndex = Math.floor(Math.random() * moleHeadsStillAvailable.length);
+        let hiddenMole = moleHeadsStillAvailable[moleIndex]
+        hiddenMole.classList.remove("wgs__mole-head--hidden");
 
+        let stayUpTime = gameStyle === 'easy' ? 1500 : 900;
 
+        if (moleCount > 0) {
+            setTimeout(() => {
+                hideMole(hiddenMole);
+            }, stayUpTime);
+        }
+    };
 
-function popUpRandomMole() {
-    let moleHeadsStillAvailable;
-    if (gameStyle === "easy") {
-        moleHeadsStillAvailable = Array.from(document.querySelectorAll(".wgs__mole-head:not(.wgs__mole-head--whacked)"));
-    } else {
-        moleHeadsStillAvailable = Array.from(document.querySelectorAll(".wgs__mole-head"))
-    }
+    function hideMole(hiddenMole) {
+        hiddenMole.classList.add("wgs__mole-head--hidden");
 
-    let moleIndex = Math.floor(Math.random() * moleHeadsStillAvailable.length);
-    let hiddenMole = moleHeadsStillAvailable[moleIndex]
-    hiddenMole.classList.remove("wgs__mole-head--hidden");
+        let hideMoleTime = gameStyle === 'easy' ? 500 : 300;
 
-    let stayUpTime = gameStyle === 'easy' ? 1500 : 900;
-
-    if (moleCount > 0) {
         setTimeout(() => {
-            hideMole(hiddenMole);
-        }, stayUpTime);
-    }
-};
-
-
-
-function hideMole(hiddenMole) {
-    hiddenMole.classList.add("wgs__mole-head--hidden");
-
-    let hideMoleTime = gameStyle === 'easy' ? 500 : 300;
-
-    setTimeout(() => {
-        popUpRandomMole();
-    }, hideMoleTime);
-};
+            popUpRandomMole();
+        }, hideMoleTime);
+    };
+});
