@@ -22,11 +22,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
         // Declare the game is won when there are no moles that haven't been whacked
         if (moleHeadsStillAvailable.length === 0) {
-            // let winningHeader = document.createElement("h2")
-            // winningHeader.innerHTML = "You Win!!!"
-            // document.getElementById("sub-header").appendChild(winningHeader)
             subHeaderTitle.innerHTML = "winner!"
-
             moleHeads.forEach(moleHead => moleHead.classList.add("wgs__mole-head--game-won"))
         }
     }))
