@@ -46,6 +46,7 @@ body {
   /* for the X's that are added in during easy: */
   font-family: 'Courier New', Courier, monospace;
   color: white;
+  font-size: xx-large;
 }
 
 .wgs__mole-head {

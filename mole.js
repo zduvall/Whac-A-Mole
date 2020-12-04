@@ -28,6 +28,13 @@ window.addEventListener("DOMContentLoaded", () => {
             startButton.classList.remove("start-game-button--hover", "start-game-button--active")
         }
 
+        // remove X's in case previously played on easy
+        let wGameSpaces = document.getElementsByClassName("wgs");
+        for (let wgs of wGameSpaces) {
+            if (wgs.childElementCount > 2)
+                wgs.removeChild(wgs.lastElementChild);
+        }
+
         moleHeads.forEach(moleHead => {
             moleHead.classList.remove("wgs__mole-head--whacked", "wgs__mole-head--game-won")
             moleHead.classList.add("wgs__mole-head--hidden")
@@ -49,7 +56,7 @@ window.addEventListener("DOMContentLoaded", () => {
         event.target.classList.add("wgs__mole-head--hidden", "wgs__mole-head--whacked");
 
         if (gameStyle === "easy") {
-            let xSymbol = document.createElement("h1")
+            let xSymbol = document.createElement("h3")
             xSymbol.innerHTML = "X"
             xSymbol.classList.add(".wgs__dirt-pile__x-symbol")
             event.target.parentElement.appendChild(xSymbol)
