@@ -83,6 +83,7 @@ body {
     border:1px solid #54381e;
     border-radius: 10px;
     padding: 6px 12px;
+    margin: 0px 15px;
     box-shadow:inset 0px 1px 0px 0px #a6827e;
     text-shadow:0px 1px 0px #4d3534;
     outline: none;
