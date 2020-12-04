@@ -9,28 +9,39 @@ window.addEventListener("DOMContentLoaded", () => {
     //     }
     //   }, 1000);
 
-    setTimeout(() => {
-        popUpRandomMole();
-    }, 500);
+    let startGameButton = document.getElementById("start-game-button");
+
 
     let moleHeads = Array.from(document.querySelectorAll(".wgs__mole-head"));
-    if (gameStyle === "oneHitPerHole") moleCount = moleHeads.length;
 
     let subHeaderTitle = document.getElementById("sub-header-title");
-    subHeaderTitle.innerHTML = `moles left: ${moleCount}`;
 
+    startGameButton.addEventListener("click", () => {
+        if (gameStyle === "oneHitPerHole") moleCount = moleHeads.length;
+        subHeaderTitle.innerHTML = `moles left: ${moleCount}`;
+        startGameButton.disabled = true;
+        startGameButton.classList.remove("start-game-button--hover", "start-game-button--active")
+
+        moleHeads.forEach(moleHead => {
+            moleHead.classList.remove("wgs__mole-head--whacked", "wgs__mole-head--game-won")
+        })
+
+        setTimeout(() => {
+            popUpRandomMole();
+        }, 500);
+    })
 
     moleHeads.forEach(moleHead => moleHead.addEventListener("click", (event) => {
-        event.target.classList.add("wgs__mole-head--hidden");
-        event.target.classList.add("wgs__mole-head--whacked");
+        event.target.classList.add("wgs__mole-head--hidden", "wgs__mole-head--whacked");
 
         moleCount--;
         subHeaderTitle.innerHTML = `moles left: ${moleCount}`;
 
-        // Declare the game is won when there are no moles that haven't been whacked
+        // What happens when the game is won?
         if (moleCount === 0) {
             subHeaderTitle.innerHTML = "winner!";
             moleHeads.forEach(moleHead => moleHead.classList.add("wgs__mole-head--game-won"));
+            startGameButton.disabled = false;
         }
     }))
 

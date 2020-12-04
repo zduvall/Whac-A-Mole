@@ -65,3 +65,36 @@ body {
 .wgs__mole-head--game-won {
   margin-top: 0px;
 }
+
+/* Start Game button */
+
+.start-game {
+    display: flex;
+    justify-content: center;
+    margin-top: 3em;
+}
+
+.start-game__button {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 35px;
+    font-weight: 400;
+    background-color: #654321;
+    background:linear-gradient(to bottom, #654321 5%, #634b30 100%);
+    border:1px solid #54381e;
+    border-radius: 10px;
+    padding: 6px 12px;
+    box-shadow:inset 0px 1px 0px 0px #a6827e;
+    text-shadow:0px 1px 0px #4d3534;
+    outline: none;
+}
+
+.start-game__button--hover:hover:enabled {
+    background:linear-gradient(to bottom, #634b30 5%, #7d5d3b 100%);
+    cursor:pointer;
+    background-color:#634b30;
+}
+.start-game__button--active:active:enabled {
+    position:relative;    
+    cursor:pointer;
+    top:2px;
+}
