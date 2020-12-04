@@ -19,7 +19,7 @@ window.addEventListener("DOMContentLoaded", () => {
     })
 
     function startGame() {
-        moleCount = gameStyle === "easy" ? moleHeads.length : 16;
+        moleCount = gameStyle === "easy" ? moleHeads.length : 20;
         subHeaderTitle.innerHTML = `moles left: ${moleCount}`;
         for (let startButton of startButtons) {
             startButton.disabled = true;
@@ -33,14 +33,15 @@ window.addEventListener("DOMContentLoaded", () => {
         setTimeout(() => {
             popUpRandomMole();
         }, 500);
-        
-        if(gameStyle === "hard") {            
+
+        if (gameStyle === "hard") {
             setTimeout(() => {
                 popUpRandomMole();
             }, 900);
         }
     }
 
+    // event listener for clicking on moles
     moleHeads.forEach(moleHead => moleHead.addEventListener("click", (event) => {
         event.target.classList.add("wgs__mole-head--hidden", "wgs__mole-head--whacked");
 
@@ -70,6 +71,7 @@ window.addEventListener("DOMContentLoaded", () => {
         hiddenMole.classList.remove("wgs__mole-head--hidden");
 
         let stayUpTime = gameStyle === 'easy' ? 1500 : 900;
+        if (gameStyle === 'hard' && moleCount < 10) stayUpTime = 900 - ((10 - moleCount) * 40);
 
         if (moleCount > 0) {
             setTimeout(() => {
