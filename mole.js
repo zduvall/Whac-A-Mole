@@ -18,6 +18,8 @@ window.addEventListener("DOMContentLoaded", () => {
         startGame()
     })
 
+
+    // starting the game called from above
     function startGame() {
         moleCount = gameStyle === "easy" ? moleHeads.length : 20;
         subHeaderTitle.innerHTML = `moles left: ${moleCount}`;
@@ -28,6 +30,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
         moleHeads.forEach(moleHead => {
             moleHead.classList.remove("wgs__mole-head--whacked", "wgs__mole-head--game-won")
+            moleHead.classList.add("wgs__mole-head--hidden")
         })
 
         setTimeout(() => {
