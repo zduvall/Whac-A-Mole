@@ -48,6 +48,13 @@ window.addEventListener("DOMContentLoaded", () => {
     moleHeads.forEach(moleHead => moleHead.addEventListener("click", (event) => {
         event.target.classList.add("wgs__mole-head--hidden", "wgs__mole-head--whacked");
 
+        if (gameStyle === "easy") {
+            let xSymbol = document.createElement("h1")
+            xSymbol.innerHTML = "X"
+            xSymbol.classList.add(".wgs__dirt-pile__x-symbol")
+            event.target.parentElement.appendChild(xSymbol)
+        }
+
         if (moleCount > 0) moleCount--;
         subHeaderTitle.innerHTML = `moles left: ${moleCount}`;
 

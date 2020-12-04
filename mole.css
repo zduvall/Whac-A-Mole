@@ -43,6 +43,9 @@ body {
   position: relative;
   display: inline-block;
   overflow: hidden;
+  /* for the X's that are added in during easy: */
+  font-family: 'Courier New', Courier, monospace;
+  color: white;
 }
 
 .wgs__mole-head {
@@ -99,4 +102,10 @@ body {
     position:relative;    
     cursor:pointer;
     top:2px;
+}
+
+/* X's added in on easy, things here don't seem to be working, so I added more formatting in the wgs */
+.wgs__dirt-pile__x-symbol {
+  font-family: 'Courier New', Courier, monospace;
+  color: white;
 }
