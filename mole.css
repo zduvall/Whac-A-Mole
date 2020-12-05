@@ -43,10 +43,7 @@ body {
   position: relative;
   display: inline-block;
   overflow: hidden;
-  /* for the X's that are added in during easy: */
-  font-family: 'Courier New', Courier, monospace;
-  color: white;
-  font-size: xx-large;
+  /* z-index: -3; */
 }
 
 .wgs__mole-head {
@@ -54,6 +51,7 @@ body {
   position: absolute;
   left: 54.5px;
   transition: margin-top 0.25s;
+  /* z-index: -2; */
 }
 
 .wgs__dirt-pile {
@@ -61,6 +59,7 @@ body {
   top: 131px;
   width: 320px;
   height: 110px;
+  background: linear-gradient(transparent, transparent 50%, brown 50%);
 }
 
 .wgs__mole-head--hidden {
@@ -105,8 +104,12 @@ body {
     top:2px;
 }
 
-/* X's added in on easy, things here don't seem to be working, so I added more formatting in the wgs */
+/* X's added in on easy */
 .wgs__dirt-pile__x-symbol {
   font-family: 'Courier New', Courier, monospace;
   color: white;
+  font-size: 50px;
+  margin: 170px 0px 0px 160px;
+  z-index: 1;
+  position: relative;
 }

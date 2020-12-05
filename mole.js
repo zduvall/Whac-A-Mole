@@ -58,7 +58,7 @@ window.addEventListener("DOMContentLoaded", () => {
         if (gameStyle === "easy") {
             let xSymbol = document.createElement("h3")
             xSymbol.innerHTML = "X"
-            xSymbol.classList.add(".wgs__dirt-pile__x-symbol")
+            xSymbol.classList.add("wgs__dirt-pile__x-symbol")
             event.target.parentElement.appendChild(xSymbol)
         }
 
