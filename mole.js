@@ -5,6 +5,7 @@ window.addEventListener("DOMContentLoaded", () => {
     let startEasyButton = document.getElementById("start-easy-button");
     let startHardButton = document.getElementById("start-hard-button");
     let startButtons = document.getElementsByClassName("start-game__button")
+    let quitGameButton = document.getElementById("quit-button")
 
     let subHeaderTitle = document.getElementById("sub-header-title");
 
@@ -16,6 +17,11 @@ window.addEventListener("DOMContentLoaded", () => {
     startHardButton.addEventListener("click", () => {
         gameStyle = "hard"
         startGame()
+    })
+
+    quitGameButton.addEventListener("click", () => {
+        moleCount = -1;
+        subHeaderTitle.innerHTML = "quitter :("
     })
 
 

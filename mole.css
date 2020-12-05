@@ -43,7 +43,6 @@ body {
   position: relative;
   display: inline-block;
   overflow: hidden;
-  /* z-index: -3; */
 }
 
 .wgs__mole-head {
@@ -51,7 +50,6 @@ body {
   position: absolute;
   left: 54.5px;
   transition: margin-top 0.25s;
-  /* z-index: -2; */
 }
 
 .wgs__dirt-pile {
@@ -72,13 +70,13 @@ body {
 
 /* Start Game button */
 
-.start-game {
+.buttons-div {
     display: flex;
     justify-content: center;
     margin-top: 3em;
 }
 
-.start-game__button {
+.buttons-div__button {
     font-family: 'Courier New', Courier, monospace;
     font-size: 35px;
     font-weight: 400;
@@ -93,12 +91,12 @@ body {
     outline: none;
 }
 
-.start-game__button--hover:hover:enabled {
+.buttons-div__button--hover:hover:enabled {
     background:linear-gradient(to bottom, #634b30 5%, #7d5d3b 100%);
     cursor:pointer;
     background-color:#634b30;
 }
-.start-game__button--active:active:enabled {
+.buttons-div__button--active:active:enabled {
     position:relative;    
     cursor:pointer;
     top:2px;
