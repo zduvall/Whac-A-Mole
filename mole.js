@@ -4,7 +4,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
     let startEasyButton = document.getElementById("start-easy-button");
     let startHardButton = document.getElementById("start-hard-button");
-    let startButtons = document.getElementsByClassName("start-game__button")
+    let startButtons = document.getElementsByClassName("game-control__button-start")
     let quitGameButton = document.getElementById("quit-button")
 
     let subHeaderTitle = document.getElementById("sub-header-title");
@@ -19,14 +19,21 @@ window.addEventListener("DOMContentLoaded", () => {
         startGame()
     })
 
+    // what happens when click quit
     quitGameButton.addEventListener("click", () => {
         moleCount = -1;
         subHeaderTitle.innerHTML = "quitter :("
+        quitGameButton.disabled = true;
+        for (let startButton of startButtons) {
+            startButton.disabled = false;
+        }
     })
 
 
     // starting the game called from above
     function startGame() {
+        quitGameButton.disabled = false;
+
         moleCount = gameStyle === "easy" ? moleHeads.length : 20;
         subHeaderTitle.innerHTML = `moles left: ${moleCount}`;
         for (let startButton of startButtons) {
@@ -61,15 +68,16 @@ window.addEventListener("DOMContentLoaded", () => {
     moleHeads.forEach(moleHead => moleHead.addEventListener("click", (event) => {
         event.target.classList.add("wgs__mole-head--hidden", "wgs__mole-head--whacked");
 
-        if (gameStyle === "easy") {
-            let xSymbol = document.createElement("h3")
-            xSymbol.innerHTML = "X"
-            xSymbol.classList.add("wgs__dirt-pile__x-symbol")
-            event.target.parentElement.appendChild(xSymbol)
+        if (moleCount > 0) {
+            if (gameStyle === "easy") {
+                let xSymbol = document.createElement("h3")
+                xSymbol.innerHTML = "X"
+                xSymbol.classList.add("wgs__dirt-pile__x-symbol")
+                event.target.parentElement.appendChild(xSymbol)
+            }
+            moleCount--;
+            subHeaderTitle.innerHTML = `moles left: ${moleCount}`;
         }
-
-        if (moleCount > 0) moleCount--;
-        subHeaderTitle.innerHTML = `moles left: ${moleCount}`;
 
         // What happens when the game is won?
         if (moleCount === 0) {

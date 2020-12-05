@@ -70,13 +70,13 @@ body {
 
 /* Start Game button */
 
-.buttons-div {
+.game-control {
     display: flex;
     justify-content: center;
     margin-top: 3em;
 }
 
-.buttons-div__button {
+.game-control__button {
     font-family: 'Courier New', Courier, monospace;
     font-size: 35px;
     font-weight: 400;
@@ -91,12 +91,12 @@ body {
     outline: none;
 }
 
-.buttons-div__button--hover:hover:enabled {
+.game-control__button--hover:hover:enabled {
     background:linear-gradient(to bottom, #634b30 5%, #7d5d3b 100%);
     cursor:pointer;
     background-color:#634b30;
 }
-.buttons-div__button--active:active:enabled {
+.game-control__button--active:active:enabled {
     position:relative;    
     cursor:pointer;
     top:2px;
