@@ -101,8 +101,8 @@ window.addEventListener("DOMContentLoaded", () => {
         let hiddenMole = moleHeadsStillAvailable[moleIndex]
         hiddenMole.classList.remove("wgs__mole-head--hidden");
 
-        let stayUpTime = gameStyle === 'easy' ? 1500 : 900;
-        if (gameStyle === 'hard' && moleCount < 10) stayUpTime = 900 - ((10 - moleCount) * 40);
+        let stayUpTime = gameStyle === 'easy' ? 1500 : 1100;
+        if (gameStyle === 'hard' && moleCount < 10) stayUpTime = 1100 - ((10 - moleCount) * 40);
 
         if (moleCount > 0) {
             setTimeout(() => {
