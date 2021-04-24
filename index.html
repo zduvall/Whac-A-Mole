@@ -1,63 +1,70 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <link rel="stylesheet" href="./normalize.css" />
+    <link rel="stylesheet" type="text/css" href="mole.css" />
+    <script type="text/javascript" src="mole.js"></script>
+  </head>
 
-<head>
-  <link rel="stylesheet" href="./normalize.css">
-  <link rel="stylesheet" type="text/css" href="mole.css" />
-  <script type="text/javascript" src="mole.js"></script>
-</head>
-
-<body>
-  <div class="header" id="header">
-    <h1 class="header__title" id="game-title">Whack-A-Mole</h1>
-    <div class="header__sub-header" id="sub-header">
-      <h2 class="header__sub-header__title" id="sub-header-title">get ready!</h2>
+  <body>
+    <div class="header" id="header">
+      <h1 class="header__title" id="game-title">Whack-A-Mole</h1>
+      <div class="header__sub-header" id="sub-header">
+        <h2 class="header__sub-header__title" id="sub-header-title">
+          get ready!
+        </h2>
+      </div>
     </div>
-  </div>
-  <div class="pf">
-    <div class="wgs">
-      <img class="wgs__mole-head" src="./mole-head.png" alt="Mole Head" />
-      <img class="wgs__dirt-pile" src="./mole-hill.png" alt="Mole Hill" />
+    <div class="pf">
+      <div class="wgs">
+        <img class="wgs__mole-head" src="./mole-head.png" alt="Mole Head" />
+        <img class="wgs__dirt-pile" src="./mole-hill.png" alt="Mole Hill" />
+      </div>
+      <div class="wgs">
+        <img class="wgs__mole-head" src="./mole-head.png" alt="Mole Head" />
+        <img class="wgs__dirt-pile" src="./mole-hill.png" alt="Mole Hill" />
+      </div>
+      <div class="wgs">
+        <img class="wgs__mole-head" src="./mole-head.png" alt="Mole Head" />
+        <img class="wgs__dirt-pile" src="./mole-hill.png" alt="Mole Hill" />
+      </div>
+      <div class="wgs">
+        <img class="wgs__mole-head" src="./mole-head.png" alt="Mole Head" />
+        <img class="wgs__dirt-pile" src="./mole-hill.png" alt="Mole Hill" />
+      </div>
+      <div class="wgs">
+        <img class="wgs__mole-head" src="./mole-head.png" alt="Mole Head" />
+        <img class="wgs__dirt-pile" src="./mole-hill.png" alt="Mole Hill" />
+      </div>
+      <div class="wgs">
+        <img class="wgs__mole-head" src="./mole-head.png" alt="Mole Head" />
+        <img class="wgs__dirt-pile" src="./mole-hill.png" alt="Mole Hill" />
+      </div>
+      <div class="wgs">
+        <img class="wgs__mole-head" src="./mole-head.png" alt="Mole Head" />
+        <img class="wgs__dirt-pile" src="./mole-hill.png" alt="Mole Hill" />
+      </div>
+      <div class="wgs">
+        <img class="wgs__mole-head" src="./mole-head.png" alt="Mole Head" />
+        <img class="wgs__dirt-pile" src="./mole-hill.png" alt="Mole Hill" />
+      </div>
     </div>
-    <div class="wgs">
-      <img class="wgs__mole-head" src="./mole-head.png" alt="Mole Head" />
-      <img class="wgs__dirt-pile" src="./mole-hill.png" alt="Mole Hill" />
+    <div class="game-control">
+      <button
+        class="game-control__button game-control__button-start"
+        id="start-easy-button"
+      >
+        Start Easy
+      </button>
+      <button
+        class="game-control__button game-control__button-start"
+        id="start-hard-button"
+      >
+        Start Hard
+      </button>
+      <button class="game-control__button" id="quit-button" disabled>
+        Quit
+      </button>
     </div>
-    <div class="wgs">
-      <img class="wgs__mole-head" src="./mole-head.png" alt="Mole Head" />
-      <img class="wgs__dirt-pile" src="./mole-hill.png" alt="Mole Hill" />
-    </div>
-    <div class="wgs">
-      <img class="wgs__mole-head" src="./mole-head.png" alt="Mole Head" />
-      <img class="wgs__dirt-pile" src="./mole-hill.png" alt="Mole Hill" />
-    </div>
-    <div class="wgs">
-      <img class="wgs__mole-head" src="./mole-head.png" alt="Mole Head" />
-      <img class="wgs__dirt-pile" src="./mole-hill.png" alt="Mole Hill" />
-    </div>
-    <div class="wgs">
-      <img class="wgs__mole-head" src="./mole-head.png" alt="Mole Head" />
-      <img class="wgs__dirt-pile" src="./mole-hill.png" alt="Mole Hill" />
-    </div>
-    <div class="wgs">
-      <img class="wgs__mole-head" src="./mole-head.png" alt="Mole Head" />
-      <img class="wgs__dirt-pile" src="./mole-hill.png" alt="Mole Hill" />
-    </div>
-    <div class="wgs">
-      <img class="wgs__mole-head" src="./mole-head.png" alt="Mole Head" />
-      <img class="wgs__dirt-pile" src="./mole-hill.png" alt="Mole Hill" />
-    </div>
-  </div>
-  <div class="game-control">
-    <button
-      class="game-control__button game-control__button-start"
-      id="start-easy-button">Start Easy</button>
-    <button
-      class="game-control__button game-control__button-start"
-      id="start-hard-button">Start Hard</button>
-    <button class="game-control__button" id="quit-button"
-      disabled>Quit</button>
-  </div>
-</body>
-
+  </body>
 </html>
