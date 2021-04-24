@@ -19,7 +19,7 @@ window.addEventListener("DOMContentLoaded", () => {
         startGame()
     })
 
-    // what happens when click quit
+    // what happens when you click quit
     quitGameButton.addEventListener("click", () => {
         moleCount = -1;
         subHeaderTitle.innerHTML = "quitter :("
