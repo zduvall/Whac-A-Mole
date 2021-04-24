@@ -89,12 +89,12 @@ body {
     outline: none;
 }
 
-.game-control__button--hover:hover:enabled {
+.game-control__button:hover:enabled {
     background:linear-gradient(to bottom, #634b30 5%, #7d5d3b 100%);
     cursor:pointer;
     background-color:#634b30;
 }
-.game-control__button--active:active:enabled {
+.game-control__button:active:enabled {
     position:relative;    
     cursor:pointer;
     top:2px;
