@@ -170,4 +170,12 @@ body {
   .wgs__mole-head {
     transform: translate(-6%, 15%);
   }
+  .game-control {
+    margin-top: 1em;
+  }
+  .game-control__button {
+    font-size: 1rem;
+    padding: 0.375rem 0.75rem;
+    margin: 0 1rem;
+  }
 }
