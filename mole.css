@@ -3,12 +3,17 @@ body {
   background-color: brown;
 }
 
+.header {
+  justify-content: center;
+}
+
 .header__title {
   width: fit-content;
   margin: auto;
   font-size: 80px;
   font-family: 'Courier New', Courier, monospace;
   color: white;
+  text-align: center;
 }
 
 .header__sub-header {
@@ -42,8 +47,10 @@ body {
 
 /* whac-a-mole game space */
 .wgs {
-  width: 320px;
-  height: 241px;
+  width: 20rem;
+  height: 14.75rem;
+  /* width: 320px;
+  height: 241px; */
   position: relative;
   overflow: hidden;
   display: flex;
