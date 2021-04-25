@@ -36,19 +36,14 @@ body {
   justify-items: center;
   grid-template-rows: repeat(2, 1fr);
   grid-template-columns: repeat(4, 1fr);
-}
-
-@media (max-width: 800px) {
-  .pf {
-    grid-template-rows: repeat(4, 1fr);
-    grid-template-columns: repeat(2, 1fr);
-  }
+  grid-gap: 0.25rem;
+  height: 75vh;
 }
 
 /* whac-a-mole game space */
 .wgs {
   width: 20rem;
-  height: 14.75rem;
+  /* height: 14.75rem; */
   /* width: 320px;
   height: 241px; */
   position: relative;
@@ -58,9 +53,26 @@ body {
   /* display: inline-block; */
 }
 
+@media (max-width: 1000px) {
+  .pf {
+    height: 56vh;
+  }
+  .wgs {
+    width: 15rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .pf {
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    height: 85vh;
+  }
+}
+
 .wgs__mole-head {
-  max-width: 58.75%;
-  transform: translateX(-6.5%);
+  width: 58.75%;
+  transform: translate(-6%, 37%);
   position: absolute;
   transition: margin-top 0.25s;
   /* max-width: 11.75rem; */
@@ -77,7 +89,7 @@ body {
 }
 
 .wgs__mole-head--hidden {
-  margin-top: 291px;
+  margin-top: 100%;
 }
 
 .wgs__mole-head--game-won {
