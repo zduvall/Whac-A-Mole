@@ -43,7 +43,10 @@ body {
   grid-template-rows: repeat(2, 1fr);
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 0.25rem;
-  height: 75vh;
+  height: 38.5rem;
+  max-width: 125rem;
+  margin: auto;
+  /* height: 75vh; */
 }
 
 /* whac-a-mole game space */
@@ -61,18 +64,11 @@ body {
 
 @media (max-width: 1000px) {
   .pf {
-    height: 56vh;
+    /* height: 56vh; */
+    height: 28.75rem;
   }
   .wgs {
     width: 15rem;
-  }
-}
-
-@media (max-width: 800px) {
-  .pf {
-    grid-template-rows: repeat(4, 1fr);
-    grid-template-columns: repeat(2, 1fr);
-    height: 85vh;
   }
 }
 
@@ -83,6 +79,16 @@ body {
   transition: margin-top 0.25s;
   /* max-width: 11.75rem; */
   /* width: 188px; */
+}
+
+@media (max-width: 800px) {
+  .pf {
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .wgs__mole-head {
+    transform: translate(-6%, -2%);
+  }
 }
 
 .wgs__dirt-pile {
