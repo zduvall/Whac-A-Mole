@@ -89,7 +89,6 @@ body {
 .game-control__button {
   font-family: 'Courier New', Courier, monospace;
   font-size: 2.25rem;
-  font-weight: 400;
   background-color: #654321;
   background: linear-gradient(to bottom, #654321 5%, #634b30 100%);
   border: 1px solid #54381e;
@@ -174,7 +173,6 @@ body {
   }
   .game-control__button {
     font-size: 1rem;
-    font-weight: 1000;
     padding: 0.375rem 0.75rem;
     margin: 0 1rem;
   }
