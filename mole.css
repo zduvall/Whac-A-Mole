@@ -4,26 +4,25 @@ body {
 }
 
 .header__title {
-    width: fit-content;
-    margin: auto;
-    font-size: 80px;
-    font-family: 'Courier New', Courier, monospace;
-    color: white;
+  width: fit-content;
+  margin: auto;
+  font-size: 80px;
+  font-family: 'Courier New', Courier, monospace;
+  color: white;
 }
 
 .header__sub-header {
-    display: flex;
-    justify-content: center;
-    font-size: 30px;
-    font-family: 'Courier New', Courier, monospace;
-    color: white;
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  font-family: 'Courier New', Courier, monospace;
+  color: white;
 
-    
-    background-image: url("./mole-hill.png");
-    background-image: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+  background-image: url('./mole-hill.png');
+  background-image: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 
 /* playing field */
@@ -32,6 +31,13 @@ body {
   justify-items: center;
   grid-template-rows: repeat(2, 1fr);
   grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 800px) {
+  .pf {
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* whac-a-mole game space */
@@ -69,35 +75,35 @@ body {
 /* Start Game button */
 
 .game-control {
-    display: flex;
-    justify-content: center;
-    margin-top: 3em;
+  display: flex;
+  justify-content: center;
+  margin-top: 3em;
 }
 
 .game-control__button {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 35px;
-    font-weight: 400;
-    background-color: #654321;
-    background:linear-gradient(to bottom, #654321 5%, #634b30 100%);
-    border:1px solid #54381e;
-    border-radius: 10px;
-    padding: 6px 12px;
-    margin: 0px 15px;
-    box-shadow:inset 0px 1px 0px 0px #a6827e;
-    text-shadow:0px 1px 0px #4d3534;
-    outline: none;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 35px;
+  font-weight: 400;
+  background-color: #654321;
+  background: linear-gradient(to bottom, #654321 5%, #634b30 100%);
+  border: 1px solid #54381e;
+  border-radius: 10px;
+  padding: 6px 12px;
+  margin: 0px 15px;
+  box-shadow: inset 0px 1px 0px 0px #a6827e;
+  text-shadow: 0px 1px 0px #4d3534;
+  outline: none;
 }
 
 .game-control__button:hover:enabled {
-    background:linear-gradient(to bottom, #634b30 5%, #7d5d3b 100%);
-    cursor:pointer;
-    background-color:#634b30;
+  background: linear-gradient(to bottom, #634b30 5%, #7d5d3b 100%);
+  cursor: pointer;
+  background-color: #634b30;
 }
 .game-control__button:active:enabled {
-    position:relative;    
-    cursor:pointer;
-    top:2px;
+  position: relative;
+  cursor: pointer;
+  top: 2px;
 }
 
 /* X's added in on easy */
