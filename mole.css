@@ -46,20 +46,15 @@ body {
   height: 38.5rem;
   max-width: 125rem;
   margin: auto;
-  /* height: 75vh; */
 }
 
 /* whac-a-mole game space */
 .wgs {
   width: 20rem;
-  /* height: 14.75rem; */
-  /* width: 320px;
-  height: 241px; */
   position: relative;
   overflow: hidden;
   display: flex;
   justify-content: center;
-  /* display: inline-block; */
 }
 
 .wgs__mole-head {
@@ -67,8 +62,6 @@ body {
   transform: translate(-6%, 37%);
   position: absolute;
   transition: margin-top 0.25s;
-  /* max-width: 11.75rem; */
-  /* width: 188px; */
 }
 
 .wgs__dirt-pile {
@@ -76,8 +69,6 @@ body {
   align-self: flex-end;
   max-width: 100%;
   background: linear-gradient(transparent, transparent 50%, brown 50%);
-  /* width: 320px; */
-  /* height: 110px; */
 }
 
 .wgs__mole-head--hidden {
@@ -89,7 +80,6 @@ body {
 }
 
 /* Start Game button */
-
 .game-control {
   display: flex;
   justify-content: center;
@@ -134,7 +124,6 @@ body {
 
 @media (max-width: 1000px) {
   .pf {
-    /* height: 56vh; */
     height: 28.75rem;
   }
   .wgs {
@@ -150,7 +139,6 @@ body {
   .pf {
     grid-template-rows: repeat(4, 1fr);
     grid-template-columns: repeat(2, 1fr);
-    /* height: 85vh; */
     height: 45rem;
   }
   .wgs__mole-head {
