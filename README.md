@@ -1,4 +1,4 @@
-# Whac-A-Mole
+# [Whac-A-Mole](https://zduvall.github.io/Whac-A-Mole/)
 
 The classic game of Whac-A-Mole, built using HTML, JavaScript, and CSS. Hosted on GitHub pages.
 
