@@ -2,7 +2,7 @@
 
 The classic game of [Whac-A-Mole](https://zduvall.github.io/Whac-A-Mole/), built using HTML, JavaScript, and CSS. Hosted on GitHub pages.
 
-Challenge yourself on easy or hard mode. Play on the [live site](https://zduvall.github.io/Whac-A-Mole/)!
+Challenge yourself on easy or hard mode. Can you hit all the moes? Play on the [live site](https://zduvall.github.io/Whac-A-Mole/)!
 
 Responsive design, optimized to work in landscape on large screens, and portrait on small screens.
 
