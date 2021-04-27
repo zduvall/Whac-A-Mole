@@ -1,2 +1,3 @@
 # Whac-A-Mole
-Whac-A-Mole-html-js-css
+
+The classic game of Whac-A-Mole, built using HTML, JavaScript, and CSS.
