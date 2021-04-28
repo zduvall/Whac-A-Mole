@@ -2,7 +2,7 @@
 
 Enjly the classic game of [Whac-A-Mole](https://zduvall.github.io/Whac-A-Mole/), built using HTML, JavaScript, and CSS. Hosted on GitHub pages.
 
-Challenge yourself on easy or hard mode. Make sure to hit the moles and not the dirt! Try out the [live site](https://zduvall.github.io/Whac-A-Mole/)!
+Challenge yourself on easy mode or hard. Make sure to hit the moles and not the dirt! Try out the [live site](https://zduvall.github.io/Whac-A-Mole/)!
 
 Responsive design, optimized to work in landscape on large screens, and portrait on small screens.
 
